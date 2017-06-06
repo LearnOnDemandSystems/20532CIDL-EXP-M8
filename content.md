@@ -207,31 +207,14 @@ https://portal.azure.com
 ```
 
 
-### Sign-in to the Classic Portal
-Open a new tab in Internet Explorer and enter https://manage.windowsazure.com and sign-in to open the Classic Portal. If the Azure Tour window appears, close it. If a pop-up appears asking to use the new portal then close it. If a window appears with a title of "New" to create new services, then close it too. The Classic Portal should appear with the "All Items" view.
-
-#### :bulb: KNOWLEDGE
-Note: Service Bus functionality is not fully available yet in the new Portal \)it is in Preview). Because of this, the Classic Portal will be used for this lab.
-
-#### :camera: SCREENSHOT
->LODSProperties
->* Uri = screens/666686.jpg
+### New Service Bus
+Click the +New button in the top left of the portal and type Service, press Enter then select Service Bus from the list.
 
 
-
-#### :calling: COMMAND
-```TypeText
-https://manage.windowsazure.com
-```
 
 
 ### Create Service Bus
-In the navigation pane on the left side of the screen, scroll down, and then click Service Bus. At the bottom of the screen, click the Create button.
-
-#### :camera: SCREENSHOT
->LODSProperties
->* Uri = screens/666685.jpg
-
+At the bottom of the screen, click the Create button.
 
 
 
@@ -239,60 +222,34 @@ In the navigation pane on the left side of the screen, scroll down, and then cli
 ### In the Create a Namespace dialog box:
 In the Create a Namespace dialog box, perform the following steps:  
 a. In the Namespace Name box, type sb20532\[Your Name\].  
-b. In the Region list, select the region that is closest to your location.  
-c. In the Type list, select the Messaging option.  
-d. In the Messaging Tier list, select the Standard option.  
-e. Click the check mark button to create your namespace.
+b. In the Pricing Tier, select the Standard option.  
+c. In the Resource Group section, click Use existing then select the pre-existing resource group used previously from the dropdown.
+d. In the Region list, select the region that is closest to your location. 
+e. Click the Create button to create your namespace.
 
 #### :bulb: KNOWLEDGE
 Note: It takes approximately 1-2 minutes to create your Service Bus namespace instance.
 
-#### :camera: SCREENSHOT
->LODSProperties
->* Uri = screens/666687.jpg
-
-
-
-
 
 ### Click the new Service Bus namespace:
-In the list of Service Bus namespaces, click the namespace that you just created.
-
-#### :camera: SCREENSHOT
->LODSProperties
->* Uri = screens/666688.jpg
-
+Click the More Services option in the portal menu, then type Service Bus, and select Service Bus. In the list of Service Bus namespaces, click the namespace that you just created.
 
 
 
 
 ### At the bottom of the screen, click Connection Info
-At the bottom of the screen, click Connection Information.
-
-#### :camera: SCREENSHOT
->LODSProperties
->* Uri = screens/666689.jpg
-
-
+Under Settings, click the Shared Access Policies blade, then click RootManageSharedAccessKey.
 
 
 
 ### Copy the connection string
-Copy the RootManageSharedAccessKey connection string from the Access connection information dialog box. If prompted, click Allow Access. It is a good idea to copy it to Notepad for use later in the lab. Close the Access connection information dialog box.
-
-#### :bulb: KNOWLEDGE
-Note: You must record a connection string from the list of SAS items. It is a good idea to copy it to Notepad for use later in the lab.
-
-#### :camera: SCREENSHOT
->LODSProperties
->* Uri = screens/624269.jpg
-
+Click the Copy button next to the Connection string-Primary Key. If prompted, click Allow Access. Close the Policy blade.
 
 
 
 
 ### Paste in Notepad
-Click the Start button, then stype Notepad and paste the Endpoint into Notepad and leave it open for later in the lab.
+Click the Start button, then type Notepad and paste the Endpoint into Notepad and leave it open for later in the lab.
 
 #### :camera: SCREENSHOT
 >LODSProperties
@@ -302,62 +259,26 @@ Click the Start button, then stype Notepad and paste the Endpoint into Notepad a
 
 
 
-### At the top of the screen, click the Queues tab
-At the top of the IE screen, click the Queues tab.
-
-#### :camera: SCREENSHOT
->LODSProperties
->* Uri = screens/666691.jpg
+### Under Entities, click the Queues blade
+In the Service Bus blade, under Entities, click the Queues blade.
 
 
 
-
-
-### At the bottom-left corner of the screen, click New
-At the bottom-left corner of the screen, click New. If it is not automatically selected, select App Services > Service Bus > Queue > Custom Create. \)Cube icon)
-
-#### :camera: SCREENSHOT
->LODSProperties
->* Uri = screens/666692.jpg
+### At the top, click +Queue
+At the top, click +Queue 
 
 
 
-
-
-### In the Create a Queue dialog box:
-In the Create a Queue dialog box, perform the following steps:  
-a. In the Queue Name box, type signin.  
-b. In the Region list, select the same region that you selected for the namespace.  
-c. In the Namespace box, provide the value sb20532\[Your Name\].  
-d. Click next arrow to move to the next step in the wizard.
-
-#### :camera: SCREENSHOT
->LODSProperties
->* Uri = screens/666693.jpg
-
-
-
-
-
-### Continue in the Create a Queue dialog box
-e. Leave all fields as their default values.  
-f. Click the check mark button to create the new queue.
-
-#### :camera: SCREENSHOT
->LODSProperties
->* Uri = screens/666694.jpg
-
-
+### In the Create Queue blade:
+In the Create Queue blade, perform the following steps:  
+a. In the Name box, type signin.  
+b. Leave all fields as their default values.  
+c. Click the Create button to create the new queue.
 
 
 
 ### Verify Queue created
-Verify Queue created by clicking the green notification button at the bottom right of the portal.
-
-#### :camera: SCREENSHOT
->LODSProperties
->* Uri = screens/666695.jpg
-
+Verify Queue created by clicking on the queue name (signin) to view the queue blade.
 
 
 
@@ -756,21 +677,16 @@ c. In the Account kind list, ensure that the General purpose option is selected.
 d. In the Performance section, ensure that the Standard option is selected.  
 e. Click on the Replication list and select the Locally Redundant \)LRS) option.  
 f. In the Location list, select the region closest to your current location.  
-g. In the Resource group section, select the Use existing option.  
-h. In the Resource group section, locate the dialog box and provide the value 20532.  
+g. In the Resource group section, select the Use existing option, locate the dropdown listbox and select the pre-existing resource group used previously.  
+h. Leave other options to default
 i. Ensure that the Pin to dashboard option is selected.  
 j. Click Create.
-
-#### :camera: SCREENSHOT
->LODSProperties
->* Uri = screens/666771.jpg
-
 
 
 
 
 ### Verify new Storage account:
-Once the Storage account instance is created, the blade for the new instance will open automatically.
+Once the Storage account instance is created, the blade for the new instance should open automatically.
 
 #### :camera: SCREENSHOT
 >LODSProperties
@@ -793,30 +709,8 @@ Note: you can use any of the keys listed for this lab.
 
 
 
-
-
 ### View connection string option:
-For the access key you selected, click the three ellipsis \)...) button to the right of the key. Once clicked, select the View connection string option.
-
-#### :camera: SCREENSHOT
->LODSProperties
->* Uri = screens/666774.jpg
-
-
-
-
-
-### Copy your connection string for the access key:
-In the View connection string dialog, copy your connection string for the access key you selected. Close the View connection string dialog by clicking OK.
-
-#### :bulb: KNOWLEDGE
-Note: This connection string will be used in various parts of this lab.
-
-#### :camera: SCREENSHOT
->LODSProperties
->* Uri = screens/666775.jpg
-
-
+For the access key you selected, click the Copy button to the right of the connection string field. If prompted, click Allow Access.
 
 
 
@@ -1085,44 +979,14 @@ Within the app.config file, locate the following configuration setting:
 
 
 
-### Switch to Classic Portal
-Switch to Classic Portal tab in Internet Explorer. It should be open on the Service Bus that you created earlier on the Queues tab. Click the back arrow button and then click on the Service Bus you create again to see the Service Bus namespace page.
 
-#### :bulb: KNOWLEDGE
-You can skip this step if you have already copied the Service Bus connection string to Notepad.
-
-#### :camera: SCREENSHOT
->LODSProperties
->* Uri = screens/666798.jpg
-
-
-
-
-
-### Click the Connection Information button
-On the Service Bus namespace page, click the Connection Information button at the bottom of the page.
-
-#### :bulb: KNOWLEDGE
-You can skip this step if you have already copied the Service Bus connection string to Notepad.
-
-#### :camera: SCREENSHOT
->LODSProperties
->* Uri = screens/666799.jpg
 
 
 
 
 
 ### Copy the connection string for the Service Bus
-Copy the connection string for the Service Bus SAS by clicking the copy button which appears when you hover over the connection string.
-
-#### :bulb: KNOWLEDGE
-You can skip this step if you have already copied the Service Bus connection string to Notepad. Just copy it now to the Clipboard using Ctrl\+C.
-
-#### :camera: SCREENSHOT
->LODSProperties
->* Uri = screens/666800.jpg
-
+Copy the connection string for the Service Bus SAS by switching to Notepad, highlighting the connection string that begins with Endpoint=sb:// and copying it to the clipboard by using Ctrl\+C.
 
 
 
@@ -1339,19 +1203,8 @@ Locate the Setting element with the name Microsoft.ServiceBus.ConnectionString.
 >* Uri = screens/666704.jpg
 
 
-
-
-
-### Switch to Classic Portal to copy Connection String
-Switch to Classic Portal to copy Connection String from the Service Bus namespace page
-
-#### :bulb: KNOWLEDGE
-You can skip this step if you have already copied the Service Bus connection string to Notepad.
-
-#### :camera: SCREENSHOT
->LODSProperties
->* Uri = screens/666705.jpg
-
+### Copy the connection string for the Service Bus
+Copy the connection string for the Service Bus SAS by switching to Notepad, highlighting the connection string that begins with Endpoint=sb:// and copying it to the clipboard by using Ctrl\+C.
 
 
 
@@ -1955,7 +1808,7 @@ Close RDP session and click OK to disconnect
 
 
 ### Stop VM to save billing charges
-If you are stopping labs for the day, on the vm2032 Overview page in the Azure Portal, click Stop to stop billing charges until you start labs again. When prompted, click Yes to stop the VM. Close Internet Explorer 
+If you are stopping labs for the day, on the vm2032 Overview page in the Azure Portal, click Stop to stop billing charges until you start labs again. If prompted, click Yes to stop the VM. Close Internet Explorer 
 
 #### :camera: SCREENSHOT
 >LODSProperties
